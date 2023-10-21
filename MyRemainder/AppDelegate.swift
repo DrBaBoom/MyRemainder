@@ -6,14 +6,22 @@
 //
 
 import UIKit
+import UserNotifications
+import BackgroundTasks
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        BGTaskScheduler.shared.register(
+          forTaskWithIdentifier: "com.mycompany.myapp.task.refresh",
+          using: nil) { task in
+            self.refresh() // 1
+            task.setTaskCompleted(success: true) // 2
+            self.scheduleNextRefresh() // 3
+        }
+        scheduleNextRefresh()
         return true
     }
 
@@ -31,6 +39,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    func refresh() {
+        print("Want to create note")
+        let content = UNMutableNotificationContent()
+        content.body = "HiiiiiiiHHH"
+        content.sound = .defaultCritical
+        let dateMatching = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute],
+                                                           from: Date.now)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateMatching, repeats: false)
+        let id = "MyRemainder\(dateMatching.year!)\(dateMatching.month!)\(dateMatching.day!)\(dateMatching.hour!)\(dateMatching.minute!)"
+        let request = UNNotificationRequest(identifier: id ,
+                                            content: content,
+                                            trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
+            if error != nil {
+                print("Something went wrong with Notification")
+            }
+        })
+//      let formattedDate = Self.dateFormatter.string(from: Date())
+//      UserDefaults.standard.set(formattedDate, forKey: "YuraKey")
+//      print("refresh occurred")
+    }
 
+    func scheduleNextRefresh() {
+      let request = BGAppRefreshTaskRequest(identifier: "com.mycompany.myapp.task.refresh")
+      request.earliestBeginDate = Date(timeIntervalSinceNow: 5)
+      do {
+        try BGTaskScheduler.shared.submit(request)
+        print("background refresh scheduled")
+      } catch {
+        print("Couldn't schedule app refresh \(error.localizedDescription)")
+      }
+    }
 }
 

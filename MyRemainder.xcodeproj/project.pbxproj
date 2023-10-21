@@ -19,6 +19,7 @@
 		DE5875372ABC5CCF00D58ED7 /* Task_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5875362ABC5CCF00D58ED7 /* Task_VC.swift */; };
 		DE5875392ABC5E5900D58ED7 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5875382ABC5E5900D58ED7 /* Extentions.swift */; };
 		DE58753B2ABC6C0D00D58ED7 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE58753A2ABC6C0D00D58ED7 /* Note.swift */; };
+		DEB9ED3D2AE2DDE1008BAADD /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9ED3C2AE2DDE1008BAADD /* Enums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		DE5875362ABC5CCF00D58ED7 /* Task_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_VC.swift; sourceTree = "<group>"; };
 		DE5875382ABC5E5900D58ED7 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		DE58753A2ABC6C0D00D58ED7 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		DEB9ED3C2AE2DDE1008BAADD /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,6 @@
 				6B02AB8E7A4EB34C9ED2AE7F /* Pods-MyRemainder.debug.xcconfig */,
 				677DCB2C31891C80D2E4EFDC /* Pods-MyRemainder.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -89,6 +90,7 @@
 				DE58753A2ABC6C0D00D58ED7 /* Note.swift */,
 				DE5875362ABC5CCF00D58ED7 /* Task_VC.swift */,
 				DE5875382ABC5E5900D58ED7 /* Extentions.swift */,
+				DEB9ED3C2AE2DDE1008BAADD /* Enums.swift */,
 				DE5875242ABC567E00D58ED7 /* Main.storyboard */,
 				DE5875342ABC59E700D58ED7 /* MyCell.swift */,
 				DE5875272ABC567F00D58ED7 /* Assets.xcassets */,
@@ -229,6 +231,7 @@
 				DE5875392ABC5E5900D58ED7 /* Extentions.swift in Sources */,
 				DE58751F2ABC567E00D58ED7 /* AppDelegate.swift in Sources */,
 				DE5875372ABC5CCF00D58ED7 /* Task_VC.swift in Sources */,
+				DEB9ED3D2AE2DDE1008BAADD /* Enums.swift in Sources */,
 				DE5875212ABC567E00D58ED7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,7 +308,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -359,7 +362,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -383,8 +386,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -412,8 +414,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

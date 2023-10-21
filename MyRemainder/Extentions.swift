@@ -49,3 +49,15 @@ extension UITextField {
         self.resignFirstResponder()
     }
 }
+
+
+extension Duration {
+    static func minutes(_ m: any BinaryInteger) -> Duration {
+        Duration.seconds(Int(m) * 60)
+    }
+    
+    static func hours(_ h: any BinaryInteger) -> Duration {
+        Duration.minutes(Int(h) * 60)
+    }
+    
+}
